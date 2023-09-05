@@ -1,17 +1,24 @@
-<script setup></script>
+<script setup lang="ts">
+import logo from '@/контакти.jpg'
+</script>
 
 <template>
 	<main>
-		<section class="hero">123</section>
-		<section class=""></section>
+		<img :src="logo" alt="" />
+		<div class="hero1"></div>
 	</main>
 </template>
 
 <style lang="scss" scoped>
 main {
 	background: blanchedalmond;
-	.hero {
-		font-size: 30px;
+	img {
+		object-fit: cover;
+	}
+	.hero1 {
+		background: url('@/замовити послугу.jpg');
+		height: 300px;
+		background-size: contain;
 	}
 }
 </style>

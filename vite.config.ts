@@ -1,7 +1,13 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+	base: './',
+	// assetsInclude: './public',
+	plugins: [vue()],
+	resolve: {
+		alias: {
+			'@': '/public/assets', // Use '@/' as an alias for the '/assets' directory
+		},
+	},
 })
