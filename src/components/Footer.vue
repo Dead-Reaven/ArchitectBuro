@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-	<footer>Footer</footer>
+	<footer class="container">Footer</footer>
 </template>
 
 <style lang="scss" scoped>
