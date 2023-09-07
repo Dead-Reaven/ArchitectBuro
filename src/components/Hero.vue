@@ -3,7 +3,7 @@
 		<swiper
 			:pagination="paginationOptions"
 			:modules="modules"
-			class="min-h-[450px] h-[80vh]"
+			class="min-h-[450px] h-hero-full lg:h-hero-full-lg"
 		>
 			<swiper-slide
 				class="relative"

@@ -1,28 +1,66 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import Select from './Select.vue'
+
 const isBurgerOpened = ref<boolean>(false)
 const toggleIsBurgerOpened = () =>
 	(isBurgerOpened.value = !isBurgerOpened.value)
+
+const items = [
+	{
+		title: 'Про нас',
+		menu: [
+			{ label: 'Architect', href: '#' },
+			{ label: 'design', href: '#' },
+		],
+	},
+	{
+		title: 'Проєкти',
+		menu: [
+			{ label: 'Architect', href: '#' },
+			{ label: 'design', href: '#' },
+		],
+	},
+	{
+		title: 'Послуги',
+		menu: [
+			{ label: 'Architect', href: '#' },
+			{ label: 'design', href: '#' },
+		],
+	},
+	{
+		title: 'Новини',
+		menu: [
+			{ label: 'Architect', href: '#' },
+			{ label: 'design', href: '#' },
+		],
+	},
+	{
+		title: 'Контакти',
+		menu: [
+			{ label: 'Architect', href: '#' },
+			{ label: 'design', href: '#' },
+		],
+	},
+]
 </script>
 
 <template>
 	<header
-		class="relative container flex items-center py-4 z-10 lg:py-0 lg:h-[115px]"
+		class="relative container flex items-center py-4 z-10 h-header-md lg:py-0 lg:h-header-lg"
 	>
 		<img src="@/хеадер/header.svg" alt="logo" class="w-[48px] h-[36px]" />
 
-		<nav class="h-full lg:mx-auto"  :hidden="isBurgerOpened">
+		<nav class="h-full lg:mx-auto" :hidden="isBurgerOpened">
 			<ul
-				class="flex flex-col gap-7 p-7 absolute top-[85px] right-10 bg-white rounded-xl
-				lg:static lg:flex-row lg:bg-transparent lg:h-full lg:py-0 lg:gap-0"
+				class="flex flex-col absolute top-[85px] right-10 bg-white rounded-xl
+				lg:static lg:flex-row lg:bg-transparent lg:p-7 lg:h-full lg:py-0 lg:gap-0"
 			>
 				<li
-					v-for="el in ['Про нас', 'Проєкти', 'Послуги', 'Новини', 'Контакти']"
-					class="cursor-pointer
-					items-center lg:h-[115px] lg:flex lg:p-10 lg:border-r lg:border-r-[#E6E8EC]  "
+					v-for="{ title, menu } in items"
+					class="p-10 cursor-pointer items-center lg:flex lg:border-r lg:border-r-[#E6E8EC]"
 				>
-					<!-- border-t-slate-500 border-t	lg:border-t-0 lg:border-x-[1px] lg:border-red-400 -->
-					{{ el }}
+					<Select :title="title" :menu="menu" />
 				</li>
 			</ul>
 		</nav>

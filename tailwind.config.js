@@ -12,6 +12,13 @@ export default {
 				disabled: '#777E90',
 				white: '#FCFCFD',
 			},
+			height: {
+				'header-md': '88px',
+				'header-lg': '115px',
+				
+				'hero-full': "calc(100vh - theme('height.header-md'))",
+				'hero-full-lg': "calc(100vh - theme('height.header-lg'))",
+			},
 		},
 		container: {
 			center: true,
