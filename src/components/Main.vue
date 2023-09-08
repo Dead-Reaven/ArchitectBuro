@@ -1,11 +1,12 @@
 <script setup lang="ts">
-
-import Hero from './Hero.vue'
+import Hero from './sections/Hero.vue'
+import Services from './sections/Services.vue'
 </script>
 
 <template>
 	<main>
 		<Hero />
-
+		<Services />
+		<section></section>
 	</main>
 </template>

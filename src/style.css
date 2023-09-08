@@ -2,17 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	html {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		@apply text-black;
+	}
+	h1 {
+		font-size: 56px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 64px; /* 114.286% */
+		letter-spacing: -1.12px;
+	}
+	h2 {
+		/* H 2_Mobile */
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 36px; /* 128.571% */
+
+		@screen lg {
+			font-size: 44px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 56px; /* 127.273% */
+			letter-spacing: -0.88px;
+		}
+	}
+	h3 {
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 24px; /* 100% */
+		text-transform: uppercase;
+	}
+	h4 {
+		font-feature-settings:
+			'clig' off,
+			'liga' off;
+		/* H4 */
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 34px; /* 141.667% */
+	}
+	p {
+		/* Body text_Mobile */
+		@apply text-[theme(colors.body-text)];
+
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px; /* 131.25% */
+		@screen lg {
+			/* Body text */
+			font-size: 18px;
+			line-height: 24px; /* 133.333% */
+		}
+	}
+
+	nav {
+		color: #777e90;
+		text-align: center;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 16px; /* 100% */
+	}
+}
+
 @layer utilities {
+	.caption {
+		color: #777e90;
+		/* Caption */
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 16px; /* 100% */
+		text-transform: uppercase;
+	}
+	.btn-text {
+		/* Btn text */
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 18px; /* 100% */
+	}
 	.btn-primary {
-		@apply bg-primary px-6 py-4 rounded-full text-white;
+		@apply bg-primary px-6 py-4 rounded-full text-white btn-text;
 	}
 	.btn-primary:disabled {
 		@apply bg-disabled px-6 py-4 rounded-full;
 	}
 	.btn-secondary {
 		@apply bg-[white] border-2 border-[#777E90] px-6 py-4 rounded-full;
+		color: #23262f;
+		text-align: center;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 18px; /* 100% */
 	}
 	.btn-secondary:active {
 		@apply bg-secondary px-6 py-4 rounded-full;
 	}
+	.bullet-active {
+		background-image: url('../public/assets/pagination/active_bullet.svg');
+		opacity: 1;
+	}
+	.section-container {
+		@apply container flex flex-col  gap-[10vw] my-[10vw];
+	}
 }
+/* gap-[2vw] md:gap-[4vw] lg:gap-[8vw] */

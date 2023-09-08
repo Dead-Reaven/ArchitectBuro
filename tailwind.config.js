@@ -11,11 +11,15 @@ export default {
 				secondary: 'rgb(255, 232, 232)',
 				disabled: '#777E90',
 				white: '#FCFCFD',
+				gray: '#E6E8EC',
+				black: '#23262F',
+				'blue-30': '#F1F3FC',
+				'body-text': '#4D4D4D',
 			},
 			height: {
 				'header-md': '88px',
 				'header-lg': '115px',
-				
+
 				'hero-full': "calc(100vh - theme('height.header-md'))",
 				'hero-full-lg': "calc(100vh - theme('height.header-lg'))",
 			},

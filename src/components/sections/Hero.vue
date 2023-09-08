@@ -3,6 +3,7 @@
 		<swiper
 			:pagination="paginationOptions"
 			:modules="modules"
+			:loop="true"
 			class="min-h-[450px] h-hero-full lg:h-hero-full-lg"
 		>
 			<swiper-slide
@@ -10,19 +11,20 @@
 				v-for="({ src, h, p }, index) in sliders"
 				:key="index"
 			>
+				<!-- bg effect -->
 				<div class="absolute w-full left-0 h-full object-cover bg-[#E3A02D]" />
 				<img
 					:src="src"
 					class="opacity-85 absolute w-full left-0 h-full object-cover mix-blend-hard-light"
 				/>
-
+				<!-- bg effect -->
+				<!-- textcontainer -->
 				<div
-					class="z-10 h-full container pt-[125px] flex flex-col justify-around relative"
+					class="pb-[200px] z-10 h-full container flex flex-col justify-around relative"
 				>
-					<!-- textcontainer -->
 					<div class="shrink">
-						<p>{{ h }}</p>
-						<h1 class="pt-3 pb-10">{{ p }}</h1>
+						<p class="caption">{{ p }}</p>
+						<h1 class="pt-3 pb-10">{{ h }}</h1>
 						<button class="btn-secondary">Всі проекти</button>
 					</div>
 				</div>
@@ -42,8 +44,9 @@ import img4 from '@/слайдер/Rectangle 64.jpg'
 
 const paginationOptions: PaginationOptions = {
 	clickable: true,
+	bulletActiveClass: 'bullet-active',
 	renderBullet: (_, className) => {
-		return `<span class="${className} w-[48px] h-[48px] rounded-full bg-blue-500"></span>`
+		return `<img src="../../public/assets/pagination/bullet.svg" class="${className} h-12 w-12 bg-transparent opacity-100"></img>`
 	},
 }
 const modules = [Pagination]
@@ -57,8 +60,3 @@ const sliders = [
 
 defineProps()
 </script>
-
-<style>
-.swiper-pagination {
-}
-</style>

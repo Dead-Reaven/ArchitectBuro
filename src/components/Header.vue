@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Select from './Select.vue'
+import Select from './ui/Select.vue'
 
 const isBurgerOpened = ref<boolean>(false)
 const toggleIsBurgerOpened = () =>
@@ -53,12 +53,11 @@ const items = [
 
 		<nav class="h-full lg:mx-auto" :hidden="isBurgerOpened">
 			<ul
-				class="flex flex-col absolute top-[85px] right-10 bg-white rounded-xl
-				lg:static lg:flex-row lg:bg-transparent lg:p-7 lg:h-full lg:py-0 lg:gap-0"
+				class="flex flex-col absolute top-[85px] right-10 bg-white rounded-xl lg:static lg:flex-row lg:bg-transparent lg:p-7 lg:h-full lg:py-0 lg:gap-0"
 			>
 				<li
 					v-for="{ title, menu } in items"
-					class="p-10 cursor-pointer items-center lg:flex lg:border-r lg:border-r-[#E6E8EC]"
+					class="hover:bg-blue-30 p-10 cursor-pointer items-center max-lg:border-t border-t-gray lg:flex lg:border-r lg:border-r-gray first:border-t-0"
 				>
 					<Select :title="title" :menu="menu" />
 				</li>
