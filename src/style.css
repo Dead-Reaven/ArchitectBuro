@@ -111,7 +111,7 @@
 		opacity: 1;
 	}
 	.section-container {
-		@apply container flex flex-col  gap-[10vw] my-[10vw];
+		@apply container flex flex-col  gap-[10vw] lg:gap-[6vw] my-[10vw];
 	}
 }
 /* gap-[2vw] md:gap-[4vw] lg:gap-[8vw] */

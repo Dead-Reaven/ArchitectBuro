@@ -7,6 +7,6 @@ import Services from './sections/Services.vue'
 	<main>
 		<Hero />
 		<Services />
-		<section></section>
+		<section class="section-container"></section>
 	</main>
 </template>

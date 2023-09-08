@@ -37,7 +37,7 @@
 				/>
 			</div>
 		</div>
-		<button class="btn-primary w-fit mx-auto lg:mt-[-6vw]">
+		<button class="btn-primary w-fit mx-auto ">
 			Замовити послугу
 		</button>
 	</section>

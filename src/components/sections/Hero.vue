@@ -46,7 +46,11 @@ const paginationOptions: PaginationOptions = {
 	clickable: true,
 	bulletActiveClass: 'bullet-active',
 	renderBullet: (_, className) => {
-		return `<img src="../../public/assets/pagination/bullet.svg" class="${className} h-12 w-12 bg-transparent opacity-100"></img>`
+		return `<div class="${className} h-12 w-12 bg-transparent opacity-100">
+			<svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+  			<circle cx="24" cy="24.7778" r="8" fill="#23262F"/>
+			</svg>
+			</div>`
 	},
 }
 const modules = [Pagination]
