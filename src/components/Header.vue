@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import Select from './ui/Select.vue'
 
-const isBurgerOpened = ref<boolean>(false)
+const isBurgerOpened = ref<boolean>(true)
 const toggleIsBurgerOpened = () =>
 	(isBurgerOpened.value = !isBurgerOpened.value)
 

@@ -9,7 +9,8 @@ export default {
 			colors: {
 				primary: 'rgb(242, 63, 38)',
 				secondary: 'rgb(255, 232, 232)',
-				disabled: '#777E90',
+				'gray-50': '#777E90',
+				'gray-100': '#4D4D4D',
 				white: '#FCFCFD',
 				gray: '#E6E8EC',
 				black: '#23262F',
