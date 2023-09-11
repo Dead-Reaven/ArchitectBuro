@@ -11,18 +11,31 @@
 					</p>
 				</div>
 				<!-- arrows navigation -->
-				<div class="flex pb-8 gap-4">
+				<div class="flex pb-8 gap-4 cursor-pointer">
 					<img
 						src="@/arrows/arrow.svg"
-						class="rotate-180 opacity-50"
+						class="rotate-180"
+						:class="{ 'opacity-50': swiperRef?.isBeginning }"
 						alt="arrow"
 						id="prev-arrow"
+						@click="slidePrev"
 					/>
-					<img src="@/arrows/arrow.svg" alt="arrow" id="next-arrow" />
+					<img
+						src="@/arrows/arrow.svg"
+						:class="{ 'opacity-50': swiperRef?.isEnd }"
+						alt="arrow"
+						id="next-arrow"
+						@click="slideNext"
+					/>
 				</div>
 			</div>
 			<!-- cards container -->
-			<Swiper :speed="500" :slides-per-view="'auto'" space-between="30px">
+			<Swiper
+				:speed="500"
+				:slides-per-view="'auto'"
+				space-between="30px"
+				@swiper="initSwiper"
+			>
 				<SwiperSlide
 					v-for="(card, id) in cardsState"
 					class="flex w-fit gap-[30px]"
@@ -35,7 +48,8 @@
 </template>
 
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
+import { ref } from 'vue'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/vue'
 import { NavigationOptions, Swiper as SwiperTypes } from 'swiper/types'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
@@ -68,6 +82,22 @@ const cardsState = [
 		img: img4,
 	},
 ]
+
+const swiperRef = ref<SwiperTypes>()
+
+const initSwiper = (instance: any) => {
+	swiperRef.value = instance
+}
+const slidePrev = () => {
+	if (swiperRef.value) {
+		swiperRef.value.slidePrev()
+	}
+}
+const slideNext = () => {
+	if (swiperRef.value) {
+		swiperRef.value.slideNext()
+	}
+}
 </script>
 
 <style scoped></style>
