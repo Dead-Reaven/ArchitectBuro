@@ -11,7 +11,7 @@
 					</p>
 				</div>
 				<!-- arrows navigation -->
-				<div class="flex pb-8 gap-4 cursor-pointer">
+				<div class="flex gap-4 pb-8 cursor-pointer">
 					<img
 						src="@/arrows/arrow.svg"
 						class="rotate-180"
@@ -49,7 +49,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 import { NavigationOptions, Swiper as SwiperTypes } from 'swiper/types'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'

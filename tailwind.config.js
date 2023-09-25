@@ -16,6 +16,7 @@ export default {
 				black: '#23262F',
 				'blue-30': '#F1F3FC',
 				'body-text': '#4D4D4D',
+				'info-block': 'rgba(89, 115, 255, 0.17)',
 			},
 			height: {
 				'header-md': '88px',
@@ -23,6 +24,12 @@ export default {
 
 				'hero-full': "calc(100vh - theme('height.header-md'))",
 				'hero-full-lg': "calc(100vh - theme('height.header-lg'))",
+			},
+			boxShadow: {
+				'inner-blue':
+					'-11.30564px 11.30564px 11.30564px 0px rgba(255, 255, 255, 0.10) inset',
+				'inner-gray':
+					'11.30564px -11.30564px 11.30564px 0px rgba(194, 194, 194, 0.10) inset',
 			},
 		},
 		container: {
