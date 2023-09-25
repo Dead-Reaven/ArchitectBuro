@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import Select from './ui/Select.vue'
 
-const isBurgerOpened = ref<boolean>(true)
+const isBurgerOpened = ref<boolean>(false)
 const toggleIsBurgerOpened = () =>
 	(isBurgerOpened.value = !isBurgerOpened.value)
 
@@ -47,7 +47,7 @@ const items = [
 
 <template>
 	<header
-		class="relative container flex items-center py-4 z-10 h-header-md lg:py-0 lg:h-header-lg"
+		class="container relative z-10 flex items-center py-4 h-header-md lg:py-0 lg:h-header-lg"
 	>
 		<img src="@/хеадер/header.svg" alt="logo" class="w-[48px] h-[36px]" />
 
@@ -57,13 +57,13 @@ const items = [
 			>
 				<li
 					v-for="{ title, menu } in items"
-					class="hover:bg-blue-30 p-10 cursor-pointer items-center max-lg:border-t border-t-gray lg:flex lg:border-r lg:border-r-gray first:border-t-0"
+					class="items-center p-10 cursor-pointer hover:bg-blue-30 max-lg:border-t border-t-gray lg:flex lg:border-r lg:border-r-gray first:border-t-0"
 				>
 					<Select :title="title" :menu="menu" />
 				</li>
 			</ul>
 		</nav>
-		<button class="btn-primary mx-auto lg:mx-0">
+		<button class="mx-auto btn-primary lg:mx-0">
 			<a href="#">Замовити послугу</a>
 		</button>
 		<!-- burger btn -->

@@ -6,8 +6,8 @@ import Team from './sections/Team.vue'
 
 <template>
 	<main>
-		<!-- <Hero /> -->
-		<!-- <Services /> -->
+		<Hero />
+		<Services />
 		<Team />
 	</main>
 </template>
