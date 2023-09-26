@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Clients from './sections/Clients.vue'
+import Companies from './sections/Companies.vue'
 import Hero from './sections/Hero.vue'
 import Info from './sections/Info.vue'
 import Order from './sections/Order.vue'
@@ -15,5 +16,6 @@ import Team from './sections/Team.vue'
 		<Info />
 		<Clients />
 		<Order />
+		<Companies />
 	</main>
 </template>
