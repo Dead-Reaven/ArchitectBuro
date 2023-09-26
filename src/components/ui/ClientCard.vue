@@ -1,6 +1,9 @@
 <template>
 	<div
-		class="flex flex-col justify-between max-w-[360px] min-h-[432px] px-8 py-16 rounded-[20px] bg-blue-30"
+		class="flex flex-col justify-between w-[360px] max-w-[360px] min-h-[432px] px-8 py-16 rounded-[20px] bg-blue-30
+		hover:bg-[rgba(252,_252,_253,_1)] hover:shadow-client-card-hover hover:translate-y-[15px] hover:overflow-visible
+		transition-all duration-700 
+		"
 	>
 		<!-- profile img   -->
 		<div>

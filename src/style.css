@@ -46,7 +46,8 @@
 		font-weight: 700;
 		line-height: 34px; /* 141.667% */
 	}
-	p {
+	p,
+	.body-text {
 		/* Body text_Mobile */
 		@apply text-[theme(colors.body-text)];
 

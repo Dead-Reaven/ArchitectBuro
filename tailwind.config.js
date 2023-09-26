@@ -30,16 +30,17 @@ export default {
 					'-11.30564px 11.30564px 11.30564px 0px rgba(255, 255, 255, 0.10) inset',
 				'inner-gray':
 					'11.30564px -11.30564px 11.30564px 0px rgba(194, 194, 194, 0.10) inset',
+				'client-card-hover': '-24px 64px 41px -19px rgba(15,15,15,0.1)',
 			},
 		},
 		container: {
 			center: true,
 			padding: {
 				DEFAULT: 'calc(5vw)',
-				content: '40px',
+				content: '0px',
 			},
 			screens: {
-				content: '1160px',
+				content: '1120px',
 			},
 		},
 		maxWidth: {
