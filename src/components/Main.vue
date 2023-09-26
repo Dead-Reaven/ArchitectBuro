@@ -6,6 +6,7 @@ import Info from './sections/Info.vue'
 import Order from './sections/Order.vue'
 import Services from './sections/Services.vue'
 import Team from './sections/Team.vue'
+import News from './sections/News.vue'
 </script>
 
 <template>
@@ -17,5 +18,6 @@ import Team from './sections/Team.vue'
 		<Clients />
 		<Order />
 		<Companies />
+		<News />
 	</main>
 </template>

@@ -15,6 +15,7 @@ export default {
 				gray: '#E6E8EC',
 				black: '#23262F',
 				'blue-30': '#F1F3FC',
+				'blue-100': 'rgba(68, 87, 152, 1)',
 				'body-text': '#4D4D4D',
 				'info-block': 'rgba(89, 115, 255, 0.17)',
 			},
