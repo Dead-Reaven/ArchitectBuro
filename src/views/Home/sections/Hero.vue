@@ -39,7 +39,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { PaginationOptions } from 'swiper/types'
 import { Pagination } from 'swiper/modules'
-import img1 from '@/слайдер/image hero1.jpg'
+import img1 from '@/слайдер/hero.jpg'
 import img2 from '@/слайдер/Rectangle 62.jpg'
 import img3 from '@/слайдер/Rectangle 63.jpg'
 import img4 from '@/слайдер/Rectangle 64.jpg'

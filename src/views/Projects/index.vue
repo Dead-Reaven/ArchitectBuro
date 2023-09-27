@@ -20,7 +20,7 @@
 			<div
 				class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 md:grid-flow-col lg:grid-cols-6 lg:grid-rows-1 lg:grid-flow-row"
 			>
-				<img class="md:col-span-3" src="@/слайдер/image hero1.jpg" alt="hero" />
+				<img class="md:col-span-3" src="@/слайдер/hero.jpg" alt="hero" />
 				<img src="@/Проєкти/арх-ра/1.jpg" alt="1" />
 				<img src="@/Проєкти/арх-ра/2.jpg" alt="1" />
 				<img src="@/Проєкти/арх-ра/3.jpg" alt="1" />
