@@ -62,7 +62,7 @@ const items = [
 			</ul>
 		</nav>
 		<button class="mx-auto btn-primary lg:mx-0">
-			<a href="#">Замовити послугу</a>
+			<a href="/#service">Замовити послугу</a>
 		</button>
 		<!-- burger btn -->
 		<button class="cursor-pointer lg:hidden" @click="toggleIsBurgerOpened">
