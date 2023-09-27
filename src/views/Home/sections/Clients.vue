@@ -50,7 +50,7 @@
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Swiper as SwiperTypes } from 'swiper/types'
-import ClientCard from '../ui/ClientCard.vue'
+import ClientCard from '$/ClientCard.vue'
 import img1 from '@/clients/1.png'
 import img2 from '@/clients/2.png'
 import img3 from '@/clients/3.png'

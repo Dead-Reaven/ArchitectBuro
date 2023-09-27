@@ -26,5 +26,5 @@
 </template>
 
 <script setup lang="ts">
-import InfoBlock from '../ui/InfoBlock.vue'
+import InfoBlock from '$/InfoBlock.vue'
 </script>

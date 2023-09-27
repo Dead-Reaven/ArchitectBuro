@@ -47,7 +47,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import Details from '../ui/Details.vue'
+import Details from '$/Details.vue'
 import img1 from '@/послуги/imageservices1.jpg'
 import img2 from '@/послуги/imageservices2.jpg'
 import img3 from '@/послуги/imageservices3.jpg'

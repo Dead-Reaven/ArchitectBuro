@@ -53,7 +53,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { NavigationOptions, Swiper as SwiperTypes } from 'swiper/types'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
-import Card from '../ui/Card.vue'
+import Card from '$/Card.vue'
 
 import img1 from '@/команда/imgteam.jpg'
 import img2 from '@/команда/imgteam2.jpg'

@@ -8,6 +8,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@': '/public/assets', // Use '@/' as an alias for the '/assets' directory
+			'$': '/src/components/ui'
 		},
 	},
 })
