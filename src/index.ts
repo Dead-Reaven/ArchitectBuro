@@ -5,6 +5,7 @@ import { Footer, Header } from './components'
 
 import App from './App.vue'
 import './style.css'
+import Vue3SmoothScroll from 'vue3-smooth-scroll'
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -29,5 +30,5 @@ const router = createRouter({
 
 const app = createApp(App)
 app.use(router)
-
+app.use(Vue3SmoothScroll)
 app.mount('#app')

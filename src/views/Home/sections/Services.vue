@@ -1,5 +1,5 @@
 <template>
-	<section class="section-container">
+	<section class="section-container" id="service">
 		<div class="flex max-md:flex-col gap-6">
 			<h2 class="md:w-1/2">
 				Архітектура це простір для реалізації наших творчих і інноваційних

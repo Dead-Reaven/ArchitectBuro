@@ -1,5 +1,5 @@
 <template>
-	<section class="section-container overflow-hidden">
+	<section class="section-container overflow-hidden" id="news">
 		<Swiper
 			:speed="500"
 			:slides-per-view="'auto'"

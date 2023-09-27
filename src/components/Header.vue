@@ -19,6 +19,7 @@ const toggleIsBurgerOpened = () => {
 const items = [
 	{
 		title: 'Про нас',
+		href: '/#team'
 	},
 	{
 		title: 'Проєкти',
@@ -26,12 +27,15 @@ const items = [
 	},
 	{
 		title: 'Послуги',
+		href: '/#service'
 	},
 	{
 		title: 'Новини',
+		href: '/#news'
 	},
 	{
 		title: 'Контакти',
+		href: '/#contacts'
 	},
 ]
 </script>

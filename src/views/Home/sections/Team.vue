@@ -1,5 +1,5 @@
 <template>
-	<section class="section-container">
+	<section class="section-container" id="team">
 		<div>
 			<div class="md:flex md:flex-row-reverse md:justify-between">
 				<!-- text conteiner -->

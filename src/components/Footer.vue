@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-	<footer class="">
+	<footer class="" id="contacts">
 		<div
 			class="bg-[url('@/контакти.png')] bg-cover bg-bottom min-h-[400px] py-[75px]"
 		>
