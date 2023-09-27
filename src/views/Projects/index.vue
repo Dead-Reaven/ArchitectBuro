@@ -48,9 +48,12 @@
 			</div>
 		</section>
 	</main>
+	<Footer />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Footer from './Footer.vue'
+</script>
 
 <style scoped>
 img {

@@ -7,9 +7,9 @@ import 'swiper/css/pagination'
 
 <template>
 	<div class="min-h-screen mx-auto">
-		<Header />
+		<router-view name="header" />
 		<router-view />
-		<Footer />
+		<router-view name="footer" />
 	</div>
 </template>
 
