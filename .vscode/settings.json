@@ -1,5 +1,5 @@
 {
-	"workbench.colorTheme": "One Dark Pro",
+	"workbench.colorTheme": "One Dark Pro Darker",
 	"path-intellisense.mappings": {
 		"@": "${workspaceFolder}/public/assets",
 		"$": "${workspaceFolder}/src/components/ui"

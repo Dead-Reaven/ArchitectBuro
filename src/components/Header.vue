@@ -1,46 +1,37 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import Select from './ui/Select.vue'
 
-const isBurgerOpened = ref<boolean>(false)
-const toggleIsBurgerOpened = () =>
-	(isBurgerOpened.value = !isBurgerOpened.value)
+const isBurgerOpened = ref<boolean>(window.innerWidth >= 1120)
+
+const handleResize = () => {
+	// console.log('resize')
+	isBurgerOpened.value = window.innerWidth >= 1120
+}
+
+onMounted(() => addEventListener('resize', () => handleResize()))
+// onUnmounted(() => removeEventListener('resize', handleResize))
+
+const toggleIsBurgerOpened = () => {
+	if (window.innerWidth < 1120) isBurgerOpened.value = !isBurgerOpened.value
+}
 
 const items = [
 	{
 		title: 'Про нас',
-		menu: [
-			{ label: 'Architect', href: '#' },
-			{ label: 'design', href: '#' },
-		],
 	},
 	{
 		title: 'Проєкти',
-		menu: [
-			{ label: 'Architect', href: '#' },
-			{ label: 'design', href: '#' },
-		],
+		href: '/projects',
 	},
 	{
 		title: 'Послуги',
-		menu: [
-			{ label: 'Architect', href: '#' },
-			{ label: 'design', href: '#' },
-		],
 	},
 	{
 		title: 'Новини',
-		menu: [
-			{ label: 'Architect', href: '#' },
-			{ label: 'design', href: '#' },
-		],
 	},
 	{
 		title: 'Контакти',
-		menu: [
-			{ label: 'Architect', href: '#' },
-			{ label: 'design', href: '#' },
-		],
 	},
 ]
 </script>
@@ -49,17 +40,20 @@ const items = [
 	<header
 		class="container relative z-10 flex items-center py-4 h-header-md lg:py-0 lg:h-header-lg"
 	>
-		<img src="@/хеадер/header.svg" alt="logo" class="w-[48px] h-[36px]" />
+		<router-link to="/">
+			<img src="@/хеадер/header.svg" alt="logo" class="w-[48px] h-[36px]" />
+		</router-link>
 
-		<nav class="h-full lg:mx-auto" :hidden="isBurgerOpened">
+		<nav class="h-full lg:mx-auto" :hidden="!isBurgerOpened">
 			<ul
 				class="flex flex-col absolute top-[85px] right-10 bg-white rounded-xl lg:static lg:flex-row lg:bg-transparent lg:p-7 lg:h-full lg:py-0 lg:gap-0"
 			>
 				<li
-					v-for="{ title, menu } in items"
-					class="items-center p-10 cursor-pointer hover:bg-blue-30 max-lg:border-t border-t-gray lg:flex lg:border-r lg:border-r-gray first:border-t-0"
+					v-for="item in items"
+					class="items-center lg:flex hover:bg-blue-30 max-lg:border-t border-t-gray lg:border-r lg:border-r-gray first:border-t-0"
+					@click="toggleIsBurgerOpened"
 				>
-					<Select :title="title" :menu="menu" />
+					<Select :item="item" />
 				</li>
 			</ul>
 		</nav>

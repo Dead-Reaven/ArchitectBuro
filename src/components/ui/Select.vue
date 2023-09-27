@@ -1,13 +1,11 @@
 <template>
-	<div>{{ title }}</div>
-	
+	<router-link class="block p-10" :to="href ?? '/'">
+		{{ title }}
+	</router-link>
 </template>
 <script setup lang="ts">
-const { title, menu } = defineProps<{
-	title: string
-	menu: {
-		label: string
-		href: string
-	}[]
+const { item } = defineProps<{
+	item: { title: string; href?: string }
 }>()
+const { title, href } = item
 </script>

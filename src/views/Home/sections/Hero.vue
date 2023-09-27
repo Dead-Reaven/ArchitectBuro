@@ -25,7 +25,9 @@
 					<div class="shrink">
 						<p class="caption">{{ p }}</p>
 						<h1 class="pt-3 pb-10">{{ h }}</h1>
-						<button class="btn-secondary">Всі проекти</button>
+						<router-link to="/projects">
+							<button class="btn-secondary">Всі проекти</button>
+						</router-link>
 					</div>
 				</div>
 			</swiper-slide>
