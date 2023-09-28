@@ -25,6 +25,7 @@
 					v-if="currentImgService"
 					:key="currentImgService"
 					:src="currentImgService"
+					alt="service img"
 					class="w-full object-cover lg:pt-0 max-lg:aspect-video lg:min-w-[50%] lg:max-h-[440px] lg:h-[440px]"
 				/>
 			</transition>
