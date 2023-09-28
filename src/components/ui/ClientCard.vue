@@ -2,7 +2,7 @@
 	<div
 		class="flex flex-col justify-between w-[360px] max-w-[360px] min-h-[432px] px-8 py-16 rounded-[20px] bg-blue-30
 		hover:bg-[rgba(252,_252,_253,_1)] hover:shadow-client-card-hover hover:translate-y-[15px] hover:overflow-visible
-		transition-all duration-700 
+		transition-all duration-700
 		"
 	>
 		<!-- profile img   -->
@@ -16,7 +16,7 @@
 		</div>
 		<!-- stars -->
 		<div class="flex">
-			<img v-for="_ in starsArr" class="h-6 w-6" src="@/clients/star.svg" />
+			<img v-for="_ in starsArr" class="h-6 w-6" alt="star" src="@/clients/star.svg" />
 		</div>
 	</div>
 </template>

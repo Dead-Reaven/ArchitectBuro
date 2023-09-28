@@ -15,6 +15,7 @@
 				<div class="absolute w-full left-0 h-full object-cover bg-[#E3A02D]" />
 				<img
 					:src="src"
+					alt="bg"
 					class="opacity-85 absolute w-full left-0 h-full object-cover mix-blend-hard-light"
 				/>
 				<!-- bg effect -->
